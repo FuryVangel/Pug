@@ -11,6 +11,10 @@ ul.reviews__list
               height= review.hight
             )
           .reviews__box
-            h3.reviews__name= review.name
-            p.reviews__count Купил #{review.count} книг
+            if review.gender === "female"
+              h3.reviews__name= review.name
+              p.reviews__count Купила #{review.count} книг
+            else if review.gender === "male"
+              h3.reviews__name= review.name
+              p.reviews__count Купил #{review.count} книг
         p.reviews__review= review.review
